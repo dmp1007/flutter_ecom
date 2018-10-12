@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_ecom/auth/app.dart';
+import 'package:flutter_ecom/auth/app_state_container.dart';
 import 'package:logging/logging.dart';
 import 'package:flutter_ecom/dog/home_page.dart';
 
-void main() => runApp(new MyApp());
+//void main() => runApp(new MyApp());
+void main() => runApp(new AppStateContainer(child: new AppRootWidget()));
 
 class MyApp extends StatelessWidget {
   final Logger log = new Logger('MyApp');
+
   @override
   Widget build(BuildContext context) {
     Logger.root.level = Level.ALL;
